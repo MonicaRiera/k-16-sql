@@ -119,3 +119,9 @@ WHERE places.price > 40
 SELECT users.name, users.email, places.title, places.rating
 FROM users
 LEFT JOIN places ON places.host = users.userId
+
+--160305
+
+SELECT users.name, users.email, places.title, places.rating
+FROM users
+INNER JOIN places ON places.host = users.userId
