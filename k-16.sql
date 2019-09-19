@@ -99,3 +99,10 @@ SELECT * FROM users WHERE email LIKE '%gmail%'
 SELECT * FROM places
 LEFT JOIN types
 ON places.type = types.typeId
+
+--160302
+
+SELECT places.placeId, places.title, places.price, types.name
+FROM places
+LEFT JOIN types
+ON places.type = types.typeId
