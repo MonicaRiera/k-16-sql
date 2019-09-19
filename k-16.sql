@@ -93,3 +93,9 @@ SELECT placeId, title AS NAME, price AS AMOUNT, rating FROM places WHERE rating 
 --160209
 
 SELECT * FROM users WHERE email LIKE '%gmail%'
+
+--160301
+
+SELECT * FROM places
+LEFT JOIN types
+ON places.type = types.typeId
