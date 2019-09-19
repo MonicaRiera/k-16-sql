@@ -106,3 +106,10 @@ SELECT places.placeId, places.title, places.price, types.name
 FROM places
 LEFT JOIN types
 ON places.type = types.typeId
+
+--160303
+
+SELECT places.placeId, places.title, places.price, types.name, users.name AS host, users.email FROM places
+LEFT JOIN types ON places.type = types.typeId
+LEFT JOIN users ON places.host = users.userId
+WHERE places.price > 40
