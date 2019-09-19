@@ -69,3 +69,7 @@ SELECT placeId, title, price FROM places
 
 SELECT * FROM places WHERE price >= 150
 SELECT * FROM places WHERE type = 1
+
+--160204
+
+SELECT * FROM places WHERE city = 'Samui'
