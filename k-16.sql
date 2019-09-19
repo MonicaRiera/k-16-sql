@@ -81,3 +81,7 @@ SELECT * FROM places WHERE price BETWEEN 80 AND 150
 --160206
 
 SELECT placeId, title, price FROM places ORDER BY price
+
+--160207
+
+SELECT * FROM places WHERE title LIKE 'Amazing%'
