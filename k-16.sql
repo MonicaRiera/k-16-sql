@@ -125,3 +125,11 @@ LEFT JOIN places ON places.host = users.userId
 SELECT users.name, users.email, places.title, places.rating
 FROM users
 INNER JOIN places ON places.host = users.userId
+
+--160306
+
+SELECT places.title, users.name
+FROM places
+LEFT JOIN likes ON likes.place = places.placeId
+LEFT JOIN users ON users.userId = likes.user
+ORDER BY places.title
