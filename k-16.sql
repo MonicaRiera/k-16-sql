@@ -128,7 +128,7 @@ INNER JOIN places ON places.host = users.userId
 
 --160306
 
-SELECT places.title, users.name
+SELECT places.title, users.name AS fan
 FROM places
 LEFT JOIN likes ON likes.place = places.placeId
 LEFT JOIN users ON users.userId = likes.user
@@ -136,8 +136,17 @@ ORDER BY places.title
 
 --160307
 
-SELECT places.title, users.name
+SELECT places.title, users.name AS fan
 FROM places
 INNER JOIN likes ON likes.place = places.placeId
 LEFT JOIN users ON users.userId = likes.user
 ORDER BY users.name
+
+--160308
+
+SELECT users.name AS fan, places.title AS place, types.name AS type
+FROM places
+LEFT JOIN types ON types.typeId = places.type
+LEFT JOIN likes ON places.placeId = likes.place
+INNER JOIN users ON users.userId = likes.user
+ORDER BY fan
