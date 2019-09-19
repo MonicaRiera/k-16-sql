@@ -45,3 +45,14 @@ VALUES
 ('Cool flat in trendy area', 80, 5, 'Chiang Mai', 2, 4),
 ('Stylish room in city center', 50, 3, 'Bangkok', 3, 2),
 ('Cozy room by the beach', 40, 4, 'Samui', 3, 1)
+
+--160104
+
+CREATE TABLE likes (
+    likeId int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user int NOT NULL,
+    place int NOT NULL
+)
+
+INSERT INTO LIKES (user, place)
+VALUES (1, 1), (1, 2), (2, 1), (2, 2), (2, 4), (3, 1), (3, 3), (3, 4)
