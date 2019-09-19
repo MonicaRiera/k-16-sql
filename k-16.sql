@@ -89,3 +89,7 @@ SELECT * FROM places WHERE title LIKE 'Amazing%'
 --160208
 
 SELECT placeId, title AS NAME, price AS AMOUNT, rating FROM places WHERE rating = 5 OR rating = 3
+
+--160209
+
+SELECT * FROM users WHERE email LIKE '%gmail%'
