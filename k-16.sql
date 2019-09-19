@@ -133,3 +133,11 @@ FROM places
 LEFT JOIN likes ON likes.place = places.placeId
 LEFT JOIN users ON users.userId = likes.user
 ORDER BY places.title
+
+--160307
+
+SELECT places.title, users.name
+FROM places
+INNER JOIN likes ON likes.place = places.placeId
+LEFT JOIN users ON users.userId = likes.user
+ORDER BY users.name
