@@ -73,3 +73,7 @@ SELECT * FROM places WHERE type = 1
 --160204
 
 SELECT * FROM places WHERE city = 'Samui'
+
+--160205
+
+SELECT * FROM places WHERE price BETWEEN 80 AND 150
