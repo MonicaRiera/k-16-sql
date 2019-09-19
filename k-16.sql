@@ -64,3 +64,8 @@ SELECT * FROM places
 --160202
 
 SELECT placeId, title, price FROM places
+
+--160203
+
+SELECT * FROM places WHERE price >= 150
+SELECT * FROM places WHERE type = 1
